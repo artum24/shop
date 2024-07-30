@@ -18,7 +18,7 @@ interface ButtonProps {
 export const Button = ({
   variant = "primary",
   children,
-  className,
+  className = "",
   size = "default",
   type = "button",
   appName = "web",
