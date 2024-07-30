@@ -20,7 +20,7 @@ const EmailSection = () => {
             <Input
               type="email"
               placeholder="Enter your email"
-              className="max-w-lg flex-1"
+              classes="max-w-lg flex-1"
             />
             <Button type="submit">Subscribe</Button>
           </form>
