@@ -5,13 +5,14 @@ import classNames from "classnames";
 
 type ButtonVariant = "primary" | "outlined";
 type ButtonSize = "small" | "default";
-
+type ButtonType = "submit" | "reset" | "button";
 interface ButtonProps {
   children: ReactNode;
   className?: string;
   appName?: string;
   variant?: ButtonVariant;
   size?: ButtonSize;
+  type?: ButtonType;
 }
 
 export const Button = ({
@@ -19,6 +20,7 @@ export const Button = ({
   children,
   className,
   size = "default",
+  type = "button",
   appName = "web",
 }: ButtonProps) => {
   const variantClasses = {
@@ -31,6 +33,7 @@ export const Button = ({
   };
   return (
     <button
+      type={type as ButtonType}
       className={`${classNames("rounded-md", sizeClasses, variantClasses, { [className]: !!className })}`}
     >
       {children}
