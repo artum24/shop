@@ -6,7 +6,11 @@ type InputProps = {
   placeholder?: string;
   classes?: string;
 };
-export const Input = ({ placeholder, classes, type = "text" }: InputProps) => {
+export const Input = ({
+  placeholder,
+  classes = "",
+  type = "text",
+}: InputProps) => {
   return (
     <input
       type={type}
