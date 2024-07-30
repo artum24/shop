@@ -8,7 +8,7 @@ type ButtonSize = "small" | "default";
 type ButtonType = "submit" | "reset" | "button";
 interface ButtonProps {
   children: ReactNode;
-  className?: string;
+  classes?: string;
   appName?: string;
   variant?: ButtonVariant;
   size?: ButtonSize;
@@ -18,7 +18,7 @@ interface ButtonProps {
 export const Button = ({
   variant = "primary",
   children,
-  className = "",
+  classes = "",
   size = "default",
   type = "button",
   appName = "web",
@@ -34,7 +34,7 @@ export const Button = ({
   return (
     <button
       type={type as ButtonType}
-      className={`${classNames("rounded-md", sizeClasses, variantClasses, { [className]: !!className })}`}
+      className={`${classNames("rounded-md", sizeClasses, variantClasses, { [classes]: !!classes })}`}
     >
       {children}
     </button>
